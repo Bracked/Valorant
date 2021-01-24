@@ -8,3 +8,7 @@
 		font-style: normal;
 	}
 }
+
+@mixin adaptiv-value($property, $value) {
+	#{$property}: calc((#{$value} / 3100) * 100vw);
+}

@@ -1,6 +1,5 @@
 .footer {
-  // margin-bottom: 170px;
-  height: 66px;
+  @include adaptiv-value("height",132);
   width: 100%;
   background-color: $white;
   border-bottom-left-radius: 30px;
@@ -8,7 +7,7 @@
   // overflow: hidden;
   &__body {
     position: relative;
-    padding-bottom: 250px;
+    @include adaptiv-value("padding-bottom",304);
     overflow: hidden;
   }
 }

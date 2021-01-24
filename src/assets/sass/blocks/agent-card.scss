@@ -1,5 +1,7 @@
 .agent-card {
   position: relative;
+  display: flex;
+
 
   &--white {
     .agent-card__body {
@@ -7,11 +9,14 @@
     }
 
     .agent-card__name {
-      -webkit-text-stroke: 1px $text;
+
+      @include adaptiv-value("-webkit-text-stroke-width",2);
+      -webkit-text-stroke-color: $text;
     }
     .agent-card__abilityes {
       background-color: $white;
-      border: 1px solid $dark;
+      @include adaptiv-value("border-width",2);
+      border-color: $dark;
     }
   }
 
@@ -26,48 +31,49 @@
   }
 
   &__inner {
-
   }
   &__body {
     background: lighten($text,1%);
     height: 100%;
 
+
   }
   &__description {
     position: absolute;
     top: 0;
-    left: -14px;
-    // color: #ffffff;
+    @include adaptiv-value("left",-40);
     writing-mode: vertical-lr;
     font-family: $drukWide;
     font-weight: 500;
-    padding-top: 20px;
-
-
+    @include adaptiv-value("padding-top",20);
   }
 
   &__name {
     text-transform: uppercase;
-    font-size: 36px;
-    -webkit-text-stroke: 1px #fff;
+    @include adaptiv-value("font-size",72);
+    @include adaptiv-value("-webkit-text-stroke-width",2);
+    -webkit-text-stroke-color: #fff;
     -webkit-text-fill-color: transparent;
     padding-right: 6px;
   }
 
   &__country {
     color: $accent;
-    font-size: 12px;
-    letter-spacing: 2px;
-
+    @include adaptiv-value("font-size",24);
+    @include adaptiv-value("letter-spacing",4);
   }
 
   &__abilityes {
-    max-width: 230px;
-    min-width: 220px;
-    padding: 10px 20px;
+    // max-width: 230px;
+    // min-width: 220px;
+    @include adaptiv-value("height", 90);
+    @include adaptiv-value("padding-right", 35);
+    @include adaptiv-value("padding-left", 35);
+    @include adaptiv-value("padding-top", 10);
+    @include adaptiv-value("padding-bottom", 10);
     position: absolute;
-    left: 18px;
-    bottom: -15px;
+    @include adaptiv-value("left", 31);
+    @include adaptiv-value("bottom", -35);
   }
 
   &__item {

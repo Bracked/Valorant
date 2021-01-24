@@ -2,7 +2,10 @@
   background-color: lighten($text,5%);
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-  padding:  1.48vw 2.35vw ;
+  @include adaptiv-value("padding-top",55);
+  @include adaptiv-value("padding-bottom",63);
+  @include adaptiv-value("padding-left",73);
+  @include adaptiv-value("padding-right",73);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,26 +16,27 @@
   }
 
   &__logoes {
-    margin-right: 43px;
+     @include adaptiv-value("margin-right",43);
+
+
   }
 
   &__riot{
     position: relative;
-    margin-right: 30px;
+    @include adaptiv-value("padding-right",60);
     &::after {
       content: '';
-      right: -40px;
+      right: 0;
       top: 0;
       position: absolute;
-      width: 3px;
-      height: 21px;
+      @include adaptiv-value("width", 2);
+      @include adaptiv-value("height",42);
       background-color: $white;
-      margin-right: 15px;
     }
   }
 
   &__valorant {
-    margin-left: 30px;
+    @include adaptiv-value("padding-left", 60);
   }
 }
 

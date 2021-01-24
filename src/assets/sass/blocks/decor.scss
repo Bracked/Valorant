@@ -12,11 +12,10 @@
     content: '';
     top: -13.51vw;
     left: -13.02vw;
-    width: 57.7vw;
-    height:  57.7vw;
+    @include adaptiv-value("width",1816);
+    @include adaptiv-value("height",1816);
     background-color: $accent;
     border-radius: 50%;
-    // clip-path: circle(57.7vw at 3.02vw -5.51vw);
   }
 
   &::after {
@@ -89,7 +88,7 @@
     &::before,
     &::after {
         content: '';
-        top: -15px;
+        @include adaptiv-value("top",-22);
         position: absolute;
         width: 4px;
         height: 4px;
@@ -101,11 +100,12 @@
     }
 
     &::before {
-      left: -47px;
+      @include adaptiv-value("left",-75);
     }
 
     &::after {
-      left: -59px;
+      @include adaptiv-value("left",-107);
+
     }
   }
 
@@ -124,13 +124,13 @@
     }
 
     &::before {
-      right: 36px;
-      top: -11px;
+      @include adaptiv-value("top",-30);
+      @include adaptiv-value("right",73);
     }
 
     &::after {
-      right: -35px;
-      bottom: 10px;
+      right: -2.768vw;
+      bottom: 0.313vw;
     }
   }
 }
@@ -140,7 +140,7 @@
     &::before,
     &::after {
         content: '';
-        right: -20px;
+        @include adaptiv-value("right",-29);
         position: absolute;
         width: 4px;
         height: 4px;
@@ -152,38 +152,28 @@
     }
 
     &::before {
-      top: 97px;
+      @include adaptiv-value("top",102);
     }
 
     &::after {
-      bottom: 59px;
+      @include adaptiv-value("bottom",102);
+
     }
   }
 
   &__inner--decor {
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        width: 40px;
-        height: 4px;
-        background-color: $decor;
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-        width: 80px;
-        height: 8px;
-        }
-    }
 
     &::before {
       content: '';
       position: absolute;
-      right: -13px;
-      top: 21px;
-      width: 40px;
+      right:-12px;
+      @include adaptiv-value("top",65);
+      width: 12px;
       height: 4px;
       background-color: $decor;
       @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-      width: 80px;
+      right:-24px;
+      width: 24px;
       height: 8px;
       }
     }
@@ -192,11 +182,14 @@
       content: '';
       position: absolute;
       right: -20px;
-      bottom: 95px;
+      @include adaptiv-value("bottom",165);
       width: 20px;
       height: 4px;
+
+
       background-color: $decor;
       @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      right: -40px;
       width: 40px;
       height: 8px;
       }
@@ -209,13 +202,13 @@
     &::before {
       content: '';
       position: absolute;
-      right: -13px;
-      top: -21px;
+      @include adaptiv-value("right",-33);
+      @include adaptiv-value("top",-39);
       width: 110px;
       height: 4px;
       background-color: $decor;
       @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-      width: 80px;
+      width: 232px;
       height: 8px;
       }
     }
@@ -223,13 +216,15 @@
     &::after {
       content: '';
       position: absolute;
-      right: -20px;
-      top: 75px;
-      width: 20px;
+      right: -15px;
+      @include adaptiv-value("top",269);
+
+      width: 15px;
       height: 20px;
       background-color: $decor;
       @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-      width: 40px;
+      right: -30px;
+      width: 30px;
       height: 40px;
       }
     }
@@ -242,7 +237,8 @@
     &::before,
     &::after {
         content: '';
-        bottom: -25px;
+        @include adaptiv-value("bottom",-65);
+
         position: absolute;
         width: 4px;
         height: 4px;
@@ -254,11 +250,11 @@
     }
 
     &::before {
-    left: 10px;
+      @include adaptiv-value("left",-2);
     }
 
     &::after {
-      left: -5px;
+      @include adaptiv-value("left",18);
     }
   }
 
@@ -267,13 +263,14 @@
     &::before {
       content: '';
       position: absolute;
-      left: -16px;
-      top: 241px;
-      width: 40px;
+      left: -15px;
+      @include adaptiv-value("top",592);
+      width: 15px;
       height: 4px;
       background-color: $decor;
       @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-      width: 80px;
+      left: -30px;
+      width: 30px;
       height: 8px;
       }
     }
@@ -281,8 +278,8 @@
     &::after {
       content: '';
       position: absolute;
-      right: 35px;
-      bottom: -25px;
+      @include adaptiv-value("right",33);
+      @include adaptiv-value("bottom",-55);
       width: 20px;
       height: 20px;
       background-color: $decor;
@@ -303,18 +300,19 @@
   }
 
   &::before {
-    top: 120px;
-    left: 90px;
-    width: 32px;
-    height: 32px;
+   @include adaptiv-value("bottom",60);
+   @include adaptiv-value("left",10);
+   @include adaptiv-value("width",63);
+   @include adaptiv-value("height",63);
+
 
     background-color: #505155;
   }
   &::after {
-    top: 112px;
-    left: 150px;
-    width: 230px;
-    height: 230px;
+    @include adaptiv-value("top",180);
+   @include adaptiv-value("left",90);
+    @include adaptiv-value("width",470);
+   @include adaptiv-value("height",470);
     background-color: #efefef;
   }
 }

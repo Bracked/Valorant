@@ -1,28 +1,33 @@
 .hero {
   position: relative;
   padding: 55px 0 180px 360px;
-  background: url(../img/background.png);
+  @include adaptiv-value("padding-top",113);
+  padding-right: 0;
+  @include adaptiv-value("padding-bottom",349);
+  @include adaptiv-value("padding-left",500);
+  background-image: url(../img/background.png);
   background-color: $accent;
-  // mix-blend-mode: multiply;
-  // overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &::after {
     content: 'AGENTS';
     position: absolute;
-    top: 60px;
-    left: 120px;
+    @include adaptiv-value("top",113);
+    @include adaptiv-value("left",187);
     writing-mode: vertical-lr;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke-color:#fff;
+    @include adaptiv-value("-webkit-text-stroke-width",3);
     -webkit-text-fill-color: transparent;
-    font-size: 79px;
+    @include adaptiv-value("font-size",156);
     font-weight: 500;
     font-family: $drukWide;
   }
 
   &::before {
     content: '';
-    top: 479px;
-    left: 49px;
+    bottom: 8.077vw;
+    @include adaptiv-value("left",100);
     position: absolute;
     width: 41px;
     height: 50px;
@@ -39,12 +44,14 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     position: relative;
-    margin-right: -20px;
+    @include adaptiv-value("margin-right",-40);
+
 
   }
-  &__item {
+  &__item:not(:last-child) {
+    @include adaptiv-value("margin-right",144);
 
   }
 }

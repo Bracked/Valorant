@@ -1,3 +1,6 @@
+:root {
+  --screen-width:3100;
+}
 @import "blocks/vars";
 @import "blocks/mixins";
 @import "blocks/reset";
@@ -15,7 +18,7 @@ html {
 body {
   font-family: $text-font, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  @include adaptiv-value("font-size",16);
   color: #000;
 	background-color: $text;
 }
@@ -30,9 +33,6 @@ body {
 @import "blocks/abilityes";
 @import "blocks/skills";
 @import "blocks/skill";
-
-
-
 @import "blocks/footer";
 @import "blocks/decor";
 

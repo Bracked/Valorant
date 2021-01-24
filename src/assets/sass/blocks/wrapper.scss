@@ -20,7 +20,7 @@
 
 
 .container {
-  max-width: 89.93vw;
+  @include adaptiv-value("max-width",2660);
   margin: 0 auto;
   padding-left:  3.67vw;
   padding-right:  3.67vw;

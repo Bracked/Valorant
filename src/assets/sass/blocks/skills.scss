@@ -1,8 +1,9 @@
 .skills {
   position: absolute;
-  bottom: -20px;
   left: 0;
-  margin-left: -40px;
+  @include adaptiv-value("bottom",-40);
+  @include adaptiv-value("margin-left",-80);
+
 }
 
 .skills__list {
@@ -10,6 +11,7 @@
 }
 
 .skills__item:not(:last-child) {
-  margin-right: 80px;
+  @include adaptiv-value("margin-right",80);
+
 }
 

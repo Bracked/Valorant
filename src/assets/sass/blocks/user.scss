@@ -6,7 +6,8 @@
     font-weight: 700;
     color: $white;
     text-transform: uppercase;
-    font-size: 0.72vw;
+
+    @include adaptiv-value("font-size", 14);
     &::before {
       content: '';
       position: absolute;
@@ -15,7 +16,10 @@
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 6px 3.5px 0 3.5px;
+      @include adaptiv-value("border-left-width", 10);
+      @include adaptiv-value("border-right-width", 6);
+      border-bottom-width: 0;
+      @include adaptiv-value("border-left-width", 6);
       border-color: #ffffff transparent transparent transparent;
       transform: translateY(-50%);
 

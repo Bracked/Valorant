@@ -1,19 +1,25 @@
 .abilityes {
-  border: 1px solid $white;
+  @include adaptiv-value("border-width",2);
+  border-style: solid;
+  border-color: $white;
   background: lighten($text,1%);
+  display: flex;
+  align-items: center;
   &--white {
     background-color: $white;
-    border: 1px solid $dark;
+    @include adaptiv-value("border-width",2);
+    border-style: solid;
+    border-color: $dark;
   }
   &__list {
     display: flex;
     align-items: center;
-
   }
 
   &__item {
+
     &:not(:last-child) {
-      margin-right: 25px;
+     @include adaptiv-value("margin-right", 47);
     }
   }
 }
