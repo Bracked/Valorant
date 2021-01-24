@@ -96,6 +96,14 @@ h6 {
 }
 
 @font-face {
+    font-family: "Druk Wide";
+  src: url("../fonts/Druk Wide-Medium.woff2") format("woff2"), url("../Druk Wide-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
     font-family: "Montserrat";
   src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../Montserrat-ExtraBold.woff") format("woff");
   font-weight: 700;
@@ -107,14 +115,6 @@ h6 {
     font-family: "Montserrat";
   src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../Montserrat-Regular.woff") format("woff");
   font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: "Druk Wide";
-  src: url("../fonts/Druk Wide-Medium.woff2") format("woff2"), url("../Druk Wide-Medium.woff") format("woff");
-  font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
@@ -433,9 +433,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .skills__item:not(:last-child) {
@@ -443,9 +440,11 @@ body {
 }
 
 .skill {
-    filter: drop-shadow(0px 0px 3px #000000);
     -webkit-filter: drop-shadow(0px 0px 3px #000000);
-    -moz-filter: drop-shadow(0px 0px 3px #000000);
+    filter: drop-shadow(0px 0px 3px #000000);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .skill__body {
@@ -462,9 +461,10 @@ body {
 }
 
 .skill__body.skill__body--triangel {
-    height: 150px;
-    width: 150px;
     position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
 }
 
 .skill__body.skill__body--triangel:before {
@@ -532,6 +532,12 @@ body {
     background-color: #fff;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+}
+
+.footer__body {
+    position: relative;
+    padding-bottom: 250px;
+    overflow: hidden;
 }
 
 .page--decor::before,
@@ -751,23 +757,23 @@ body {
     background-color: #762e35;
 }
 
-.footer--decor::before,
-.footer--decor::after {
+.footer__body--decor::before,
+.footer__body--decor::after {
     content: '';
     position: absolute;
     border-radius: 50%;
 }
 
-.footer--decor::before {
-    bottom: -130px;
+.footer__body--decor::before {
+    top: 120px;
     left: 90px;
     width: 32px;
     height: 32px;
     background-color: #505155;
 }
 
-.footer--decor::after {
-    bottom: -370px;
+.footer__body--decor::after {
+    top: 112px;
     left: 150px;
     width: 230px;
     height: 230px;
@@ -778,16 +784,6 @@ body {
 .container--decor::after {
     content: '';
     position: absolute;
-    border-radius: 50%;
-}
-
-.container--decor::before {
-    bottom: -500px;
-    right: -150px;
-    width: 700px;
-    height: 700px;
-    background-color: #292C31;
-    z-index: -1;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
