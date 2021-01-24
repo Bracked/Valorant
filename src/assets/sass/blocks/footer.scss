@@ -1,0 +1,14 @@
+.footer {
+  // margin-bottom: 170px;
+  height: 66px;
+  width: 100%;
+  background-color: $white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  // overflow: hidden;
+  &__body {
+    position: relative;
+    padding-bottom: 250px;
+    overflow: hidden;
+  }
+}

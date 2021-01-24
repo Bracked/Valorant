@@ -1,0 +1,42 @@
+@import "blocks/vars";
+@import "blocks/mixins";
+@import "blocks/reset";
+@import "fonts";
+@import "blocks/supports-class";
+
+
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $text-font, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+	background-color: $text;
+}
+
+
+@import "blocks/wrapper";
+@import "blocks/header";
+@import "blocks/navigation";
+@import "blocks/user";
+@import "blocks/hero";
+@import "blocks/agent-card";
+@import "blocks/abilityes";
+@import "blocks/skills";
+@import "blocks/skill";
+
+
+
+@import "blocks/footer";
+@import "blocks/decor";
+
+
+
+
+// @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {

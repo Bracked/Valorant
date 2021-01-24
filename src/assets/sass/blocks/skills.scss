@@ -1,0 +1,15 @@
+.skills {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  margin-left: -40px;
+}
+
+.skills__list {
+  display: flex;
+}
+
+.skills__item:not(:last-child) {
+  margin-right: 80px;
+}
+

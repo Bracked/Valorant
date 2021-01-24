@@ -1,0 +1,54 @@
+.hero {
+  position: relative;
+  padding: 55px 0 180px 360px;
+  background: url(../img/background.png);
+  background-color: $accent;
+  // mix-blend-mode: multiply;
+  // overflow: hidden;
+
+  &::after {
+    content: 'AGENTS';
+    position: absolute;
+    top: 60px;
+    left: 120px;
+    writing-mode: vertical-lr;
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+    font-size: 79px;
+    font-weight: 500;
+    font-family: $drukWide;
+  }
+
+  &::before {
+    content: '';
+    top: 479px;
+    left: 49px;
+    position: absolute;
+    width: 41px;
+    height: 50px;
+    background-image: url(../img/Logo/Valorant-decor.png);
+    background-size: 41px 50px;
+    background-repeat: no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2){
+    width: 80px;
+    height: 99px;
+    background-image: url(../img/Logo/Valorant-decor@2x.png);
+    background-size: 80px 99px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-right: -20px;
+
+  }
+  &__item {
+
+  }
+}
+
+.hero__list--decor {
+
+}

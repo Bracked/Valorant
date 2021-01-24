@@ -1,0 +1,75 @@
+.agent-card {
+  position: relative;
+
+  &--white {
+    .agent-card__body {
+      background-color: $white;
+    }
+
+    .agent-card__name {
+      -webkit-text-stroke: 1px $text;
+    }
+    .agent-card__abilityes {
+      background-color: $white;
+      border: 1px solid $dark;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: poiner;
+    z-index: $z--agent-card;
+  }
+
+  &__inner {
+
+  }
+  &__body {
+    background: lighten($text,1%);
+    height: 100%;
+
+  }
+  &__description {
+    position: absolute;
+    top: 0;
+    left: -14px;
+    // color: #ffffff;
+    writing-mode: vertical-lr;
+    font-family: $drukWide;
+    font-weight: 500;
+    padding-top: 20px;
+
+
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-size: 36px;
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+    padding-right: 6px;
+  }
+
+  &__country {
+    color: $accent;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+  }
+
+  &__abilityes {
+    max-width: 230px;
+    min-width: 220px;
+    padding: 10px 20px;
+    position: absolute;
+    left: 18px;
+    bottom: -15px;
+  }
+
+  &__item {
+  }
+}

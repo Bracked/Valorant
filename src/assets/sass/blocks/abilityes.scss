@@ -1,0 +1,19 @@
+.abilityes {
+  border: 1px solid $white;
+  background: lighten($text,1%);
+  &--white {
+    background-color: $white;
+    border: 1px solid $dark;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}

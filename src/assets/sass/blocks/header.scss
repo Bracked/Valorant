@@ -1,0 +1,38 @@
+.header {
+  background-color: lighten($text,5%);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding:  1.48vw 2.35vw ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logoes {
+    margin-right: 43px;
+  }
+
+  &__riot{
+    position: relative;
+    margin-right: 30px;
+    &::after {
+      content: '';
+      right: -40px;
+      top: 0;
+      position: absolute;
+      width: 3px;
+      height: 21px;
+      background-color: $white;
+      margin-right: 15px;
+    }
+  }
+
+  &__valorant {
+    margin-left: 30px;
+  }
+}
+

@@ -1,0 +1,41 @@
+.user {
+  display: flex;
+  align-items: center;
+  &__name {
+    position: relative;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 0.72vw;
+    &::before {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 3.5px 0 3.5px;
+      border-color: #ffffff transparent transparent transparent;
+      transform: translateY(-50%);
+
+
+    }
+  }
+  &__avatar {
+    margin-right: 10px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-image: url(../img/User/avatar.png);
+    background-size: 21px 21px;
+    background-position: center;
+    // background: no-repeat;//!перевірити чи не ламається
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    width: 42px;
+    height: 42px;
+    background-image: url(../img/User/avatar@2x.png);
+    background-size: 42px 42px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.visibility-hidden {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.btn-reset {
+  border: none;
+  background-color: transparent;
+}
+
+.edge-cut {
+  clip-path: polygon(5% 0, 100% 0, 100% 60%, 100% 100%, 0 100%, 0 39%, 0 2%);
+}
+
+// .decor-dot {
+//   width: 4px;
+//   height: 4px;
+//   background-color: $decor;
+//   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+//   width: 8px;
+//   height: 8px;
+//   }
+// }
+
+// .decor-square {
+//   width: 20px;
+//   height: 20px;
+//   background-color: $decor;
+//   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+//   width: 40px;
+//   height: 40px;
+//   }
+// }
