@@ -6,4 +6,3 @@ node_modules
 .vscode
 dist
 !assets
-!index.html
